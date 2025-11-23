@@ -1,57 +1,31 @@
 Tailwind Prefixer
 
-The bulletproof VS Code extension for batch-prefixing Tailwind CSS utility classes across your entire file using the Abstract Syntax Tree (AST). Ensures variants (like hover:, md:, aria-invalid:) are preserved while only applying the prefix to the core utility class.
+Reliable Utility Class Scoping for VS Code
 
-✨ Features
+This extension enables fast, accurate, whole-file prefixing of Tailwind CSS utility classes (e.g., changing flex to ts-flex). Unlike simple regex tools, it uses Abstract Syntax Tree (AST) parsing to safely and reliably transform classes in complex modern files (JS, JSX, TS, TSX, cva, cn). It ensures 100% accuracy, maintaining code structure and preserving all CSS variants.
 
-AST-Based Reliability: Unlike regex-based tools, this extension uses a Babel-powered AST parser (Recast) to structurally analyze your code, guaranteeing correct replacement in complex files (JSX, TypeScript, cva usage).
+✨ Key Features
 
-Variant Preservation: Correctly handles all Tailwind variants.
+AST Reliability: Guarantees accurate replacement in complex frameworks like React and Svelte.
 
-Input: md:hover:bg-red-500
+Variant Preservation: Correctly prefixes the utility while preserving variants (md:hover:bg-red-500 becomes md:hover:ts-bg-red-500).
 
-Output (with prefix ts-): md:hover:ts-bg-red-500
+CVA/CN Support: Transforms classes within class-variance-authority and clsx/classnames functions.
 
-cva and cn Support: Reliably transforms classes defined in class-variance-authority (cva) and clsx/classnames/cn utility function calls.
+Configuration Ignored: Smartly skips variant names in defaultVariants object properties.
 
-Interactive Prefix: Prompts the user for the prefix (e.g., ts-, custom-) every time the command is run.
+🛠 How to Use It
 
-Whole-File Operation: Processes the entire active file with a single command.
+Open File: Open the JS, JSX, TS, or TSX file containing the Tailwind classes.
 
-🚀 Usage
+Run Command: Open the VS Code Command Palette (Ctrl/Cmd + Shift + P).
 
-Open the file containing the Tailwind classes you wish to prefix.
+Execute: Type and select "Tailwind Prefixer: Apply Prefix to File".
 
-Open the Command Palette (Ctrl/Cmd + Shift + P).
+Enter Prefix: Enter your desired prefix (e.g., ts-, app-) and press Enter.
 
-Type and select "Tailwind Prefixer: Apply Prefix to File".
+The utility classes in the active file will be instantly and correctly updated.
 
-Enter the prefix you want (e.g., ts- or project-) and press Enter.
+License
 
-The utility classes in the active file will be instantly updated.
-
-🛠 Installation
-
-You can install this extension directly from the VS Code Marketplace.
-
-📦 Building and Publishing
-
-To build this extension locally, ensure you have Node.js and the dependencies installed:
-
-# Install required AST and bundling dependencies
-
-npm install @babel/parser @babel/traverse @babel/generator recast webpack webpack-cli ts-loader @types/webpack vsce
-
-# Run the build script to bundle extension.js into dist/extension.js
-
-npm run vscode:prepublish
-
-To publish, use the vsce tool after setting up your publisher ID:
-
-# Log in with your publisher ID and PAT
-
-vsce login YOUR-PUBLISHER-ID
-
-# Publish to the Marketplace
-
-vsce publish
+This project is licensed under the MIT License.
