@@ -3,10 +3,7 @@
   <p>A VS Code extension to correctly prefix Tailwind CSS utility classes.</p>
 </div>
 
-<div align="center">
-    <img src="images/1.png" alt="Run Command" width="800" />
-    <img src="images/2.png" alt="Select Prefix" width="800" />
-</div>
+![working example](images/video.gif)
 
 ## 🚀 How to use
 

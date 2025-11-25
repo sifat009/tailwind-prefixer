@@ -1,6 +1,6 @@
 {
 	"name": "tailwind-prefixer",
-	"displayName": "Tailwind Prefixer",
+	"displayName": "Tailwind Prefix",
 	"description": "A VS Code extension to correctly prefix Tailwind CSS utility classes.",
 	"icon": "images/logo.png",
 	"version": "1.0.0",
