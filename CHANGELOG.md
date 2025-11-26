@@ -1,5 +1,9 @@
 **Change Log**
 
+[1.0.3] - 2025-11-26
+
+- Added keywords and categories to package.json for better discoverability in the VS Code marketplace.
+
 [1.0.2] - 2025-11-26
 
 - Updated logic to keep the formatting of class strings intact, preserving spaces and line breaks as in the original code.

@@ -3,7 +3,7 @@
 	"displayName": "Tailwind Prefix",
 	"description": "A VS Code extension to correctly prefix Tailwind CSS utility classes.",
 	"icon": "images/logo.png",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "Sifat",
 	"engines": {
 		"vscode": "^1.106.0"
@@ -12,7 +12,8 @@
 		"url": "https://github.com/sifat009/tailwind-prefix"
 	},
 	"categories": [
-		"Other"
+		"Other",
+		"Programming Languages"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -31,7 +32,20 @@
 		"webpack": "webpack",
 		"webpack-dev": "webpack --mode development --watch"
 	},
-	"keywords": [],
+	"keywords": [
+		"tailwind",
+		"tailwindcss",
+		"prefix",
+		"vscode-extension",
+		"vscode",
+		"tailwind-prefix",
+		"tailwind-classes",
+		"prefixer",
+		"tailwind-prefixer",
+		"classnames",
+		"css",
+		"frontend"
+	],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
