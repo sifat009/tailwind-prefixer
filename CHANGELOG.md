@@ -1,5 +1,9 @@
 **Change Log**
 
+[1.1.1] - 2015-11-30
+
+- Created separate file for tailwind classes
+
 [1.1.0] - 2025-11-27
 
 - Added support for renaming existing prefix with new one.
