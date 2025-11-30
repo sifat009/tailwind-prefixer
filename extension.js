@@ -4,6 +4,7 @@ const traverse = require('@babel/traverse').default;
 const path = require('path');
 const fs = require('fs');
 const { pathToFileURL } = require('url');
+const tailwindClassPrefixes = require('./tailwind-classes');
 
 /**
  * Check if a string looks like it contains Tailwind classes
@@ -52,81 +53,7 @@ function looksLikeTailwindClasses(str) {
  */
 function isTailwindClass(className) {
 	const baseClass = className.startsWith('-') ? className.substring(1) : className;
-	const prefixes = [
-		'container',
-		'box-',
-		'block',
-		'inline',
-		'flex',
-		'grid',
-		'hidden',
-		'basis-',
-		'flex-',
-		'grow',
-		'shrink',
-		'order-',
-		'gap-',
-		'justify-',
-		'items-',
-		'content-',
-		'p-',
-		'm-',
-		'space-x-',
-		'space-y-',
-		'w-',
-		'h-',
-		'min-w-',
-		'max-w-',
-		'size-',
-		'text-',
-		'font-',
-		'leading-',
-		'tracking-',
-		'line-clamp-',
-		'uppercase',
-		'lowercase',
-		'truncate',
-		'bg-',
-		'from-',
-		'via-',
-		'to-',
-		'border',
-		'rounded',
-		'ring-',
-		'divide-',
-		'shadow',
-		'opacity-',
-		'mix-blend-',
-		'blur-',
-		'invert',
-		'saturate-',
-		'sepia',
-		'animate-',
-		'transition',
-		'duration-',
-		'scale-',
-		'rotate-',
-		'translate-',
-		'skew-',
-		'cursor-',
-		'pointer-events-',
-		'scroll-',
-		'touch-',
-		'fill-',
-		'stroke-',
-		'static',
-		'fixed',
-		'absolute',
-		'relative',
-		'sticky',
-		'top-',
-		'bottom-',
-		'left-',
-		'right-',
-		'inset-',
-	];
-
-	return prefixes.some((p) => baseClass.startsWith(p));
+	return tailwindClassPrefixes.some((p) => baseClass.startsWith(p));
 }
 
 /**
